@@ -4,110 +4,200 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Under Construction | Refined Mobile Detailing</title>
-        <link href="resources/css/style.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
-            /* Specific overrides for the under construction page */
-            body.construction-page {
+            body {
                 margin: 0;
                 padding: 0;
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
-                background-image: url('./resources/images/soapy-car.jpg');
-                background-size: cover;
-                background-position: center;
-                position: relative;
-                color: white;
+                background-color: #f8fafc; /* Clean, modern light background */
+                color: #1e293b;
                 font-family: sans-serif;
             }
 
-            body.construction-page::before {
-                content: '';
-                position: absolute;
-                top: 0; left: 0; right: 0; bottom: 0;
-                background: rgba(250,250,250, 0.75); /* Dark overlay to match your hero section vibe */
-                z-index: 1;
+            /* Top Branding bar */
+            header {
+                padding: 20px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #e2e8f0;
+                background: white;
             }
 
-            .construction-container {
-                position: relative;
-                z-index: 2;
-                margin: auto;
-                text-align: center;
+            header h2 {
+                margin: 0;
+                font-size: 1.2rem;
+                color: #286F7F;
+                letter-spacing: 0.5px;
+            }
+
+            /* Main Layout */
+            .main-content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 padding: 40px 20px;
-                max-width: 600px;
             }
 
-            .construction-card {
-                background: rgba(255,255,255, 0.85);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                padding: 50px 30px;
-                border-radius: 12px;
-                box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            .container {
+                max-width: 900px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 50px;
+                background: white;
+                padding: 60px;
+                border-radius: 16px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+                border: 1px solid #e2e8f0;
             }
 
-            .construction-card i {
-                color: #286F7F; /* Accent green */
+            .text-side {
+                flex: 1;
+            }
+
+            .badge {
+                display: inline-block;
+                background-color: #e0f2fe;
+                color: #286F7F;
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                text-transform: uppercase;
                 margin-bottom: 20px;
+                letter-spacing: 0.5px;
             }
 
-            .construction-card h1 {
-                font-size: 2.5rem;
-                margin-bottom: 15px;
-                letter-spacing: 1px;
+            h1 {
+                font-size: 2.4rem;
+                margin: 0 0 15px 0;
+                color: #0f172a;
+                line-height: 1.2;
             }
 
-            .construction-card p {
-                font-size: 1.1rem;
-                color: #ccc;
+            p {
+                font-size: 1.05rem;
+                color: #64748b;
                 line-height: 1.6;
                 margin-bottom: 30px;
             }
 
-            .construction-btn {
-                background-color: #286F7F;
-                color: white;
-                padding: 12px 28px;
-                text-decoration: none;
-                border-radius: 6px;
-                font-weight: bold;
-                display: inline-block;
-                transition: background 0.2s ease, transform 0.2s ease;
+            .action-buttons {
+                display: flex;
+                gap: 15px;
+                align-items: center;
             }
 
-            .construction-btn:hover {
-                background-color: #286F71;
+            .btn-primary {
+                background-color: #286F7F;
+                color: white;
+                padding: 12px 24px;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 0.95rem;
+                transition: background 0.2s ease, transform 0.2s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .btn-primary:hover {
+                background-color: #1f5562;
                 transform: translateY(-2px);
             }
 
-            .construction-footer-text {
-                margin-top: 20px;
+            .contact-direct {
                 font-size: 0.9rem;
-                color: #888;
+                color: #64748b;
             }
 
-            .construction-footer-text a {
+            .contact-direct a {
                 color: #286F7F;
                 text-decoration: none;
+                font-weight: bold;
+            }
+
+            /* Graphic Side (Like Amazon's pet graphic block) */
+            .graphic-side {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                padding: 40px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .graphic-side i {
+                color: #286F7F;
+                font-size: 6rem;
+                opacity: 0.85;
+            }
+
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 20px;
+                font-size: 0.85rem;
+                color: #94a3b8;
+                border-top: 1px solid #e2e8f0;
+                background: white;
+            }
+
+            /* Responsive design for phones */
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column-reverse;
+                    padding: 30px 20px;
+                    text-align: center;
+                }
+                .action-buttons {
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .graphic-side {
+                    padding: 20px;
+                }
             }
         </style>
     </head>
-    <body class="construction-page">
+    <body>
 
-        <div class="construction-container">
-            <div class="construction-card">
-                <i class="fa-solid fa-car-on fa-3x"></i>
-                <h1>We're working on getting the website up and running</h1>
-                <p>Our website is currently undergoing construction. We'll be fully live soon!</p>
-                <a href="tel:+15014442461" class="construction-btn"><i class="fa-solid fa-phone"></i> Need a Detail Now? Call Us</a>
-                
-                <div class="construction-footer-text">
-                    Serving Little Rock, AR &bull; <a href="mailto:contact@refineddetailinglr.com">Email Us</a>
+        <header>
+            <h2>Refined Mobile Detailing</h2>
+        </header>
+
+        <div class="main-content">
+            <div class="container">
+                <div class="text-side">
+                    <span class="badge">Coming Soon</span>
+                    <h1>We're working!</h1>
+                    <p>Our website is currently getting a full detail to match the quality of our mobile service. While we finish up behind the scenes, we are still actively booking details across Little Rock!</p>
+                    
+                    <div class="action-buttons">
+                        <a href="tel:+15014442461" class="btn-primary"><i class="fa-solid fa-phone"></i> Call / Text Us</a>
+                        <span class="contact-direct">or email us <a href="mailto:contact@refineddetailinglr.com">here</a></span>
+                    </div>
+                </div>
+
+                <div class="graphic-side">
+                    <i class="fa-solid fa-road-barrier"></i>
                 </div>
             </div>
         </div>
+
+        <footer>
+            &copy; 2026 Refined Mobile Detailing. Serving Little Rock, AR &bull; All rights reserved.
+        </footer>
 
     </body>
 </html>
