@@ -544,7 +544,7 @@ body.popup-open {
 .popup-box {
     background-color: #ffffff;
     border-radius: 4px;
-    padding: 40px 30px;
+    padding: 40px 30px 10px 30px;
     width: 350px;
     text-align: center;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
