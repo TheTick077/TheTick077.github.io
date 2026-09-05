@@ -676,6 +676,14 @@ body.popup-open {
 #presale-detail a:hover {
     text-decoration: none;
 }
+.popup-text a {
+    text-decoration: underline;
+    color: var(--light-blue);
+}
+.popup-text a:hover {
+    text-decoration: none;
+    color: #1d535f
+}
 
 /* =========================================
    FAQ PAGE STYLES
