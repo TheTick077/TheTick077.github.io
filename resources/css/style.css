@@ -988,10 +988,7 @@ body.popup-open {
     border: 1px solid #e5e7eb;
     transition: transform 0.2s ease;
 }
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
+
 .feature-item i {
     font-size: 2.5rem;
     color: var(--primary-dark);
@@ -1125,7 +1122,7 @@ footer a {
     }
     .addons-container {
         width: 100% !important;
-        max-width: 800px !important; /* Expands to match the pricing cards */
+        max-width: 500px !important; /* Expands to match the pricing cards */
     }
     
     .wide-card {
@@ -1253,7 +1250,7 @@ footer a {
         max-width: 380px; /* Forces a 1x4 vertical grid */
     }
     .pricing-section {
-        background: linear-gradient(to bottom, var(--light-blue) 180px, #fdfdfd 180px);
+        background: linear-gradient(to bottom, var(--light-blue) 250px, #fdfdfd 250px);
     }
     .comparison-slider {
         height: 50vw;
@@ -1289,7 +1286,7 @@ footer a {
     #nav-faq { height: 1.1rem; }
     
     .form-container {
-        padding: 0 20px; 
+        padding: 20px; 
     }
     
     .popup-box, 
@@ -1302,8 +1299,18 @@ footer a {
     .hero-section img {
         margin-top: 90px;
     }
-    
+    .pricing-section {
+        margin-top: 59px;
+        background: linear-gradient(to bottom, var(--light-blue) 250px, #fdfdfd 250px);
+    }
+    .pricing-type-header {
+        top: 8.2rem;
+    }
+    .back-to-popup {
+        top: 5rem;
+    }
 }
+
 
 /* BREAKPOINT 5: 360px - Absolute Safety Net (Down to 320px) */
 /* Guarantees the nav links NEVER cut off the edge of the screen on tiny devices */
@@ -1314,5 +1321,11 @@ footer a {
     }
     #left-logo { height: 2.4rem; }
     #nav-home, #nav-pricing, #nav-aboutcontact { height: 0.7rem; }
-    #nav-faq { height: 0.95rem; }
+    #nav-faq { height: 0.95rem; margin-top: 3px; }
+    .features-list.grid-list li{max-width:70%;}
+}
+@media screen and (max-width: 357px) {
+    .pricing-type-header {
+        top: 7rem;
+    }
 }
